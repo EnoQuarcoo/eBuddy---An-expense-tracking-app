@@ -18,8 +18,8 @@ The eBuddy app has been deployed and is available for use at [https://ebuddy.onr
 
 Here are some screenshots of the deployed eBuddy app:
 
-![Screenshot 1](/images/screenshot1.png)
-![Screenshot 2](/images/screenshot2.png)
+![The Homepage](/images/screenshot1.png)
+![User dashboard](/images/screenshot2.png)
 
 
 ### Dependencies
