@@ -41,7 +41,9 @@ class UsernameValidationView(View):
             return JsonResponse({'username_error': 'sorry username in use,choose another one '}, status=409)
         return JsonResponse({'username_valid': True})
 
-
+class HomeView(View):
+    def get(self, request):
+        return render(request, 'authentication/index.html')
 
 class  RegistrationView(View):
     def get(self, request):
@@ -72,7 +74,7 @@ class  RegistrationView(View):
                  user.save()
                  
                  messages.success(request, 'Account successfully created!')
-                 return render(request, 'authentication/register.html')  
+                 return render(request, 'authentication/login.html')  
         
         return render(request, 'authentication/register.html')
 
