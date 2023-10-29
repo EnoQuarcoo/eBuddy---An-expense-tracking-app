@@ -23,7 +23,7 @@ def search_expenses(request):
         return JsonResponse(list(data), safe=False)
 
 
-@login_required(login_url='/authentication/register')
+@login_required(login_url='/authentication/home')
 def index(request):
     categories = Category.objects.all()
     expenses = Expense.objects.filter(owner=request.user)
@@ -44,7 +44,7 @@ def index(request):
     }
     return render(request, 'expenses/index.html', context)
 
-@login_required(login_url='/authentication/register')
+@login_required(login_url='/authentication/home')
 def add_expense(request):
     categories = Category.objects.all()
     context = {
@@ -75,7 +75,7 @@ def add_expense(request):
         return redirect('expenses')
 
 
-@login_required(login_url='/authentication/register')
+@login_required(login_url='/authentication/home')
 def expense_edit(request, id):
     expense = Expense.objects.get(pk=id)
     categories = Category.objects.all()
